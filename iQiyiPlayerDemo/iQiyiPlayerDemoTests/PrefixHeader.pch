@@ -15,5 +15,8 @@
 #import "iQiyiPlayer.h"
 #import "Masonry.h"
 //#import "MASConstraint.h"
+#import "WilsonConst.h"
+#import <Foundation/Foundation.h>
+#import "Config.h"
 
 #endif /* PrefixHeader_pch */

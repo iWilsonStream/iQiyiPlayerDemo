@@ -26,11 +26,16 @@
 - (void) configure {
     self.title = @"iQiyi Player Item List";
     
-    NSDictionary * dic1 = @{@"鬼吹灯之寻龙诀":@"http://demo.zhixueyun.com/static/00/1B/CqJoMVaFMfSEChp9AAAAABEr3BU216.mp4"};
-    NSDictionary * dic2 = @{@"火锅英雄":@"http://demo.zhixueyun.com/static/00/28/CqHYwVbiYEqEcb5DAAAAANSGOPQ829.mp4"};
-    NSDictionary * dic3 = @{@"有一个地方只有我们知道":@"http://demo.zhixueyun.com/static/00/28/CqHYwVbiXh-EHBooAAAAAOzVKUQ229.mp4"};
-    NSDictionary * dic4 = @{@"大声说我爱你":@"http://demo.zhixueyun.com/static/00/1D/CqHYwVaFQOGEEZlRAAAAADmcMCw129.mp4"};
-    NSDictionary * dic5 = @{@"叶问2":@"http://demo.zhixueyun.com/static/00/19/CqJoMVaFGgeER3dvAAAAAFGXKBg448.mp4"};
+    //寻龙诀
+    NSDictionary * dic1 = @{kPlayerMovieNameXunLongJue:kPlayerURLXunLongJue};
+    //火锅英雄
+    NSDictionary * dic2 = @{kPlayerMovieNameHuoGuo:kPlayerURLHuoGuoYingXiong};
+    //有一个地方只有我们知道
+    NSDictionary * dic3 = @{kPlayerMovieNameYouYiGeDiFang:kPlayerURLYouYiGeDiFang};
+    //大声说出我爱你
+    NSDictionary * dic4 = @{kPlayerMovieNameDaShengShuoILoveYou:kPlayerURLDaShengShuoILoveYou};
+    //叶问2
+    NSDictionary * dic5 = @{kPlayerMovieNameYeWen:kPlayerURLYeWen};
     
     _dataSource = @[dic1,dic2,dic3,dic4,dic5];
 
