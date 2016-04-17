@@ -95,7 +95,7 @@
     rect.size.height = 1;
     rect.origin.y = 39;
     UIView * line = [[UIView alloc] initWithFrame:rect];
-    line.backgroundColor = kDefaultColor;
+    line.backgroundColor = kLightGrayColor;
     [view addSubview:line];
     
     return view;
@@ -107,7 +107,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.section == 0) return 40;
-    else if (indexPath.section == 1) return 120;
+    else if (indexPath.section == 1) return 140;
     else if (indexPath.section == 2) return 120;
     else if (indexPath.section == 3) return 120;
     else return 120;
@@ -115,7 +115,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 10)];
-    view.backgroundColor = kDefaultColor;
+    view.backgroundColor = kLightGrayColor;
     
     return view;
 }

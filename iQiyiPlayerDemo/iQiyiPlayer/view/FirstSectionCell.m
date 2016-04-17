@@ -84,7 +84,7 @@
     
     //分割线
     UIView * line = [UIView new];
-    line.backgroundColor = kDefaultColor;
+    line.backgroundColor = kLightGrayColor;
     [self.contentView addSubview:line];
     [line mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(weakSelf.contentView.mas_top).offset(10);

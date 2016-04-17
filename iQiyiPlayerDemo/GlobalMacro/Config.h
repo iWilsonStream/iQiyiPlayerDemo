@@ -15,7 +15,9 @@
 #define kContentFont [UIFont fontWithName:@"Arial" size:13.f]
 #define kMinFont     [UIFont fontWithName:@"Arial" size:11.f]
 #define kTitleTextColor [UIColor blackColor]
-#define kDefaultColor RGB(235,235,241)
+#define kDefaultColor RGB(168, 167, 185)
+#define kLightGrayColor RGB(235,235,241)
+#define kGreenColor RGB(27,181,9)
 
 typedef void (^configureCellBlock) (id item, id cell, NSUInteger indexRow);
 //typedef void (^cascadeConfigureCellBlock);

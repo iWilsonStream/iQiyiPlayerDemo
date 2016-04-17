@@ -9,6 +9,7 @@
 #import "iQiyiDataSource.h"
 #import "PlayerDetailCell.h"
 #import "FirstSectionCell.h"
+#import "SecondSectionCell.h"
 
 @interface iQiyiDataSource ()
 
@@ -55,6 +56,14 @@
         return cell;
     }
     
+    if(indexPath.section == 1) {
+        SecondSectionCell * cell = [tableView dequeueReusableCellWithIdentifier:kPlayerDetailSecondCell];
+        if(!cell) {
+            cell = [[SecondSectionCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kPlayerDetailSecondCell];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        return cell;
+    }
     
     PlayerDetailCell * cell = [tableView dequeueReusableCellWithIdentifier:kPlayerDetailCell];
     if(!cell) {
