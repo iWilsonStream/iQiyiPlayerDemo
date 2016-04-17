@@ -121,7 +121,7 @@
 //    }
     
     //开始播放
-    [self play];
+//    [self play];
 //    self.controlView.startBtn.selected = YES;
 //    self.isPauseByUser                 = NO;
     

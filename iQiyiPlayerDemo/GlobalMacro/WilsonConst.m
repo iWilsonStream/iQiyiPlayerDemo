@@ -8,6 +8,9 @@
 
 #import "WilsonConst.h"
 
+NSString * const kPlayerDetailFirstCell = @"FirstCell";
+NSString * const kPlayerDetailSecondCell = @"SecondCell";
+NSString * const kPlayerDetailThirdCell  = @"ThirdCell";
 NSString * const kPlayerDetailCell = @"PlayerDetailCell";
 NSString * const kPlayerURLXunLongJue      = @"http://demo.zhixueyun.com/static/00/1B/CqJoMVaFMfSEChp9AAAAABEr3BU216.mp4";
 NSString * const kPlayerURLHuoGuoYingXiong = @"http://demo.zhixueyun.com/static/00/28/CqHYwVbiYEqEcb5DAAAAANSGOPQ829.mp4";

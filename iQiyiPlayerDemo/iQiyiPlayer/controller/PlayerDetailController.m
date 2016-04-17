@@ -26,7 +26,9 @@
 }
 
 - (void)setupPlayer {
-    self.player = [[iQiyiPlayer alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    [self setNeedsStatusBarAppearanceUpdate];
+    self.player = [[iQiyiPlayer alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, 200)];
     [self.view addSubview:self.player];
 //    [self.player mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.top.equalTo(self.view).offset(20);
@@ -47,12 +49,14 @@
 }
 
 - (void) setupTableView {
-    UITableView * tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, self.view.frame.size.height - 200) style:UITableViewStyleGrouped];
+    UITableView * tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 220, self.view.frame.size.width, self.view.frame.size.height - 220) style:UITableViewStyleGrouped];
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 //    tableView.backgroundView = nil;
     tableView.delegate = self;
+//    tableView.rowHeight = UITableViewAutomaticDimension;
+//    tableView.estimatedRowHeight = 50;
 //    tableView.tableFooterView = [UIView new];
-    tableView.rowHeight = 40;
+//    tableView.rowHeight = 40;
     [self.view addSubview:tableView];
 //    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.top.equalTo(self.player.mas_bottom).with.offset(10);
@@ -74,11 +78,45 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if(section == 2) return 40;
+    
     return 0.01f;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    if(section != 2) return nil;
+    
+    UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
+    view.backgroundColor = RGB(255, 255, 255);
+    
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 200, 40)];
+    label.text = @"播放列表";
+    label.backgroundColor = [UIColor clearColor];
+    label.textColor = [UIColor blackColor];
+    label.font = [UIFont fontWithName:@"Arial" size:16.f];
+    [view addSubview:label];
+    
+    CGRect rect = view.frame;
+    rect.size.height = 1;
+    rect.origin.y = 39;
+    UIView * line = [[UIView alloc] initWithFrame:rect];
+    line.backgroundColor = RGB(235, 235, 241);
+    [view addSubview:line];
+    
+    return view;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 5;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.section == 0) return 40;
+    else if (indexPath.section == 1) return 120;
+    else if (indexPath.section == 2) return 120;
+    else if (indexPath.section == 3) return 120;
+    else return 120;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {

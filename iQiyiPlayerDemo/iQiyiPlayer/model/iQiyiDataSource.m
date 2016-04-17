@@ -8,6 +8,7 @@
 
 #import "iQiyiDataSource.h"
 #import "PlayerDetailCell.h"
+#import "FirstSectionCell.h"
 
 @interface iQiyiDataSource ()
 
@@ -44,10 +45,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    
+    if(indexPath.section == 0) {
+        FirstSectionCell * cell = [tableView dequeueReusableCellWithIdentifier:kPlayerDetailFirstCell];
+        if(!cell) {
+            cell = [[FirstSectionCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kPlayerDetailFirstCell];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        return cell;
+    }
+    
+    
     PlayerDetailCell * cell = [tableView dequeueReusableCellWithIdentifier:kPlayerDetailCell];
     if(!cell) {
         cell = [[PlayerDetailCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kPlayerDetailCell];
-        
+        UIView * selectedView = [UIView new];
+        selectedView.backgroundColor = RGB(235, 235, 241);
+        cell.selectedBackgroundView = selectedView;
 //        cell.backgroundColor = RGB(255, 255, 255);
     }
     

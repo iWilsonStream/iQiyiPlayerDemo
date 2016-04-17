@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+UIKIT_EXTERN NSString * const kPlayerDetailFirstCell;
+UIKIT_EXTERN NSString * const kPlayerDetailSecondCell;
+UIKIT_EXTERN NSString * const kPlayerDetailThirdCell;
 UIKIT_EXTERN NSString * const kPlayerDetailCell;
 UIKIT_EXTERN NSString * const kPlayerURLXunLongJue;
 UIKIT_EXTERN NSString * const kPlayerURLHuoGuoYingXiong;
