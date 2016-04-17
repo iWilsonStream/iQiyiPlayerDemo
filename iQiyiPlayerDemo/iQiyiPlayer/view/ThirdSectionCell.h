@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PlayerDetailCell.h"
+#import "PlayerDetailFilmListModel.h"
 
-@interface ThirdSectionCell : UITableViewCell
+@interface ThirdSectionCell : PlayerDetailCell
+
+- (void) configureFilmCellWithModel:(PlayerDetailFilmListModel *)model;
 
 @end
+

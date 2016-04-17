@@ -10,6 +10,7 @@
 #import "PlayerDetailCell.h"
 #import "FirstSectionCell.h"
 #import "SecondSectionCell.h"
+#import "ThirdSectionCell.h"
 
 @interface iQiyiDataSource ()
 
@@ -62,6 +63,21 @@
             cell = [[SecondSectionCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kPlayerDetailSecondCell];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
+        return cell;
+    }
+    
+    if(indexPath.section == 2) {
+        ThirdSectionCell * cell = [tableView dequeueReusableCellWithIdentifier:kPlayerDetailThirdCell];
+        if(!cell) {
+            cell = [[ThirdSectionCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kPlayerDetailThirdCell];
+            UIView * selectView = [UIView new];
+            selectView.backgroundColor = RGB(249, 249, 249);
+            cell.selectedBackgroundView = selectView;
+        }
+        
+        PlayerDetailFilmListModel * model = self.items[indexPath.section][indexPath.row];
+        [cell configureFilmCellWithModel:model];
+        
         return cell;
     }
     

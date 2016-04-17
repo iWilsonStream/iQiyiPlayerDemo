@@ -7,6 +7,7 @@
 //
 
 #import "PlayerDetailController.h"
+#import "PlayerDetailFilmListModel.h"
 #import "iQiyiDataSource.h"
 
 @interface PlayerDetailController ()<UITableViewDelegate>
@@ -56,7 +57,7 @@
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.player.mas_bottom);
         make.left.right.equalTo(self.view);
-        make.bottom.equalTo(self.view.mas_bottom).offset(100);
+        make.size.mas_equalTo(CGSizeMake(kScreenSize.width, kScreenSize.height - 200));
     }];
     self.tableView = tableView;
     
@@ -64,9 +65,24 @@
     NSMutableArray * items = [NSMutableArray array];
     [items addObject:@[@"123"]];
     [items addObject:@[@"231"]];
-    [items addObject:@[@"我的麦霸女友",@"极品无赖犯二记",@"山炮进城",@"羞羞鬼"]];
-    [items addObject:@[@"123"]];
-    [items addObject:@[@"微星阿斯顿发",@"啊第三方qer",@"发生地方"]];
+    
+    PlayerDetailFilmListModel * model1 = [PlayerDetailFilmListModel new];
+    model1.coverURL = @"film_01.png";
+    model1.name = @"阴阳先生之末代天师";
+    model1.content = @"两代天师首次联手伏魔";
+    model1.playRecord = @"1799.7万次播放";
+    
+    PlayerDetailFilmListModel * model2 = [PlayerDetailFilmListModel new];
+    model2.coverURL = @"film_02.png";
+    model2.name = @"阴阳先生";
+    model2.content = @"阴阳眼下捉鬼七宗罪";
+    model2.playRecord = @"8169.8万次播放";
+    
+    NSArray * array = [[NSArray alloc] initWithObjects:model1, model2,nil];
+    
+    [items addObject:array];
+//    [items addObject:@[@"123"]];
+//    [items addObject:@[@"微星阿斯顿发",@"啊第三方qer",@"发生地方"]];
     self.dataSource = [[iQiyiDataSource alloc] initWithItems:items];
     self.tableView.dataSource = self.dataSource;
 }
@@ -106,10 +122,14 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     if(indexPath.section == 0) return 40;
     else if (indexPath.section == 1) return 140;
-    else if (indexPath.section == 2) return 120;
-    else if (indexPath.section == 3) return 120;
+    else if (indexPath.section == 2) {
+        CGFloat standardImgWidth = kStandardImgWidth;
+        return standardImgWidth / 1.5 + 20;
+    }
+//    else if (indexPath.section == 3) return 120;
     else return 120;
 }
 
