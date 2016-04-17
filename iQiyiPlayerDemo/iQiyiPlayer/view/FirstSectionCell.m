@@ -42,13 +42,13 @@
         make.size.mas_equalTo(CGSizeMake(20, 20));
     }];
     self.playIcon = playIcon;
-    
+   
     
     //播放次数
     UILabel * recordLabl = [UILabel new];
     recordLabl.text = @"1053.5万次播放";
-    recordLabl.font = [UIFont fontWithName:@"Arial" size:14];
-    recordLabl.textColor = [UIColor blackColor];
+    recordLabl.font = kContentFont;
+    recordLabl.textColor = kTitleTextColor;
     recordLabl.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:recordLabl];
     [recordLabl mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -73,8 +73,8 @@
     UIButton * download = [UIButton buttonWithType:UIButtonTypeCustom];
     [download setImage:[UIImage imageNamed:@"home_titleBar_offline"] forState:UIControlStateNormal];
     [download setTitle:@"下载" forState:UIControlStateNormal];
-    [download.titleLabel setFont:[UIFont fontWithName:@"Arial" size:11.f]];
-    [download setTitleColor:RGB(235, 235, 241) forState:UIControlStateNormal];
+    [download.titleLabel setFont:kMinFont];
+    [download setTitleColor:kDefaultColor forState:UIControlStateNormal];
     [self.contentView addSubview:download];
     [download mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(weakSelf.shareBtn.mas_right).offset(5);
@@ -84,7 +84,7 @@
     
     //分割线
     UIView * line = [UIView new];
-    line.backgroundColor = RGB(235, 235, 241);
+    line.backgroundColor = kDefaultColor;
     [self.contentView addSubview:line];
     [line mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(weakSelf.contentView.mas_top).offset(10);

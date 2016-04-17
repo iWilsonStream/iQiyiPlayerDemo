@@ -28,14 +28,14 @@
 - (void)setupPlayer {
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     [self setNeedsStatusBarAppearanceUpdate];
-    self.player = [[iQiyiPlayer alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, 200)];
+    self.player = [[iQiyiPlayer alloc] init];
     [self.view addSubview:self.player];
-//    [self.player mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.view).offset(20);
-//        make.left.right.equalTo(self.view);
-//        //注意此处，宽高比16:9优先级比1000低就行
-//        make.height.equalTo(self.player.mas_width).multipliedBy(9.0f/16.0f).with.priority(750);
-//    }];
+    [self.player mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(20);
+        make.left.right.equalTo(self.view);
+        //注意此处，宽高比16:9优先级比1000低就行
+        make.height.equalTo(self.player.mas_width).multipliedBy(9.0f/16.0f).with.priority(750);
+    }];
     
     self.player.videoURL = self.videoURL;
     self.player.playerLayerGravityMode = PlayerLayerGravityModeResizeAspect;
@@ -49,23 +49,18 @@
 }
 
 - (void) setupTableView {
-    UITableView * tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 220, self.view.frame.size.width, self.view.frame.size.height - 220) style:UITableViewStyleGrouped];
+    UITableView * tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-//    tableView.backgroundView = nil;
     tableView.delegate = self;
-//    tableView.rowHeight = UITableViewAutomaticDimension;
-//    tableView.estimatedRowHeight = 50;
-//    tableView.tableFooterView = [UIView new];
-//    tableView.rowHeight = 40;
     [self.view addSubview:tableView];
-//    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.player.mas_bottom).with.offset(10);
-//        make.left.right.equalTo(self.view);
-//        make.bottom.equalTo(self.view.mas_bottom).offset(100);
-//    }];
+    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.player.mas_bottom);
+        make.left.right.equalTo(self.view);
+        make.bottom.equalTo(self.view.mas_bottom).offset(100);
+    }];
     self.tableView = tableView;
     
-//    [self.tableView registerNib:[UINib nibWithNibName:kPlayerDetailCell bundle:nil] forCellReuseIdentifier:kPlayerDetailCell];
+
     NSMutableArray * items = [NSMutableArray array];
     [items addObject:@[@"123"]];
     [items addObject:@[@"231"]];
@@ -74,7 +69,6 @@
     [items addObject:@[@"微星阿斯顿发",@"啊第三方qer",@"发生地方"]];
     self.dataSource = [[iQiyiDataSource alloc] initWithItems:items];
     self.tableView.dataSource = self.dataSource;
-//    246 245 250
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -93,22 +87,22 @@
     UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 200, 40)];
     label.text = @"播放列表";
     label.backgroundColor = [UIColor clearColor];
-    label.textColor = [UIColor blackColor];
-    label.font = [UIFont fontWithName:@"Arial" size:16.f];
+    label.textColor = kTitleTextColor;
+    label.font = kTitleFont;
     [view addSubview:label];
     
     CGRect rect = view.frame;
     rect.size.height = 1;
     rect.origin.y = 39;
     UIView * line = [[UIView alloc] initWithFrame:rect];
-    line.backgroundColor = RGB(235, 235, 241);
+    line.backgroundColor = kDefaultColor;
     [view addSubview:line];
     
     return view;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 5;
+    return 2.5;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -121,7 +115,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 10)];
-    view.backgroundColor = RGB(235, 235, 241);
+    view.backgroundColor = kDefaultColor;
     
     return view;
 }
