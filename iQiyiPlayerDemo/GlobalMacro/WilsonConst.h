@@ -13,6 +13,7 @@ UIKIT_EXTERN NSString * const kPlayerDetailFirstCell;
 UIKIT_EXTERN NSString * const kPlayerDetailSecondCell;
 UIKIT_EXTERN NSString * const kPlayerDetailThirdCell;
 UIKIT_EXTERN NSString * const kPlayerDetailFourthCell;
+UIKIT_EXTERN NSString * const kPlayerDetailFivthCell;
 UIKIT_EXTERN NSString * const kPlayerDetailCell;
 UIKIT_EXTERN NSString * const kPlayerURLXunLongJue;
 UIKIT_EXTERN NSString * const kPlayerURLHuoGuoYingXiong;

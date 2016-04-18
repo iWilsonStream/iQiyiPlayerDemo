@@ -34,7 +34,6 @@
     [self.player mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).offset(20);
         make.left.right.equalTo(self.view);
-        //注意此处，宽高比16:9优先级比1000低就行
         make.height.equalTo(self.player.mas_width).multipliedBy(9.0f/16.0f).with.priority(750);
     }];
     
@@ -88,6 +87,7 @@
     }
     [items addObject:filmslistArr];
     [items addObject:likelistArr];
+    [items addObject:@[@"123"]];
     
     self.dataSource = [[iQiyiDataSource alloc] initWithItems:items];
     self.tableView.dataSource = self.dataSource;

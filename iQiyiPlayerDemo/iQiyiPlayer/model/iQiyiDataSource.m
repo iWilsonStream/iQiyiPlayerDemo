@@ -11,6 +11,7 @@
 #import "FirstSectionCell.h"
 #import "SecondSectionCell.h"
 #import "ThirdSectionCell.h"
+#import "FithSectionCell.h"
 
 @interface iQiyiDataSource ()
 
@@ -86,6 +87,15 @@
         PlayerDetailFilmListModel * model = self.items[indexPath.section][indexPath.row];
         [cell configureFilmCellWithModel:model];
         
+        return cell;
+    }
+    
+    if(indexPath.section == 4) {
+        FithSectionCell * cell = [tableView dequeueReusableCellWithIdentifier:kPlayerDetailFivthCell];
+        if(!cell) {
+            cell = [[FithSectionCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kPlayerDetailFivthCell];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
         return cell;
     }
     

@@ -14,6 +14,8 @@
 		976C54CB1CC4866C00CD076A /* film_09.png in Resources */ = {isa = PBXBuildFile; fileRef = 976C54C61CC4866C00CD076A /* film_09.png */; };
 		976C54CE1CC48CBF00CD076A /* iqiyi_filmslist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 976C54CD1CC48CBF00CD076A /* iqiyi_filmslist.plist */; };
 		976C54D11CC48D6F00CD076A /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976C54D01CC48D6F00CD076A /* BaseModel.m */; };
+		976C54D41CC4AA7A00CD076A /* FithSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 976C54D31CC4AA7A00CD076A /* FithSectionCell.m */; };
+		976C54D61CC4C42300CD076A /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 976C54D51CC4C42300CD076A /* icon2.png */; };
 		9773DC5D1CC3534900671520 /* PlayerDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9773DC561CC3534900671520 /* PlayerDetailController.m */; };
 		9773DC5E1CC3534900671520 /* iQiyiDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9773DC591CC3534900671520 /* iQiyiDataSource.m */; };
 		9773DC5F1CC3534900671520 /* PlayerDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9773DC5C1CC3534900671520 /* PlayerDetailCell.m */; };
@@ -107,6 +109,9 @@
 		976C54CD1CC48CBF00CD076A /* iqiyi_filmslist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iqiyi_filmslist.plist; sourceTree = "<group>"; };
 		976C54CF1CC48D6F00CD076A /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		976C54D01CC48D6F00CD076A /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		976C54D21CC4AA7A00CD076A /* FithSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FithSectionCell.h; sourceTree = "<group>"; };
+		976C54D31CC4AA7A00CD076A /* FithSectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FithSectionCell.m; sourceTree = "<group>"; };
+		976C54D51CC4C42300CD076A /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 		9773DC551CC3534900671520 /* PlayerDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerDetailController.h; sourceTree = "<group>"; };
 		9773DC561CC3534900671520 /* PlayerDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerDetailController.m; sourceTree = "<group>"; };
 		9773DC581CC3534900671520 /* iQiyiDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iQiyiDataSource.h; sourceTree = "<group>"; };
@@ -277,6 +282,8 @@
 				9773DC671CC3537D00671520 /* ThirdSectionCell.m */,
 				9773DC9B1CC37C5B00671520 /* PraiseConsole.h */,
 				9773DC9C1CC37C5B00671520 /* PraiseConsole.m */,
+				976C54D21CC4AA7A00CD076A /* FithSectionCell.h */,
+				976C54D31CC4AA7A00CD076A /* FithSectionCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -413,6 +420,7 @@
 		978BBEF41CC0D9CD004607C2 /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				976C54D51CC4C42300CD076A /* icon2.png */,
 				976C54C21CC4866C00CD076A /* film_05.png */,
 				976C54C31CC4866C00CD076A /* film_06.png */,
 				976C54C41CC4866C00CD076A /* film_07.png */,
@@ -586,6 +594,7 @@
 				9773DC931CC3588F00671520 /* mini_share@3x.png in Resources */,
 				9773DCA41CC380C700671520 /* offline_clarity_black_down_iphone@3x.png in Resources */,
 				978BBEA11CC095AD004607C2 /* LaunchScreen.storyboard in Resources */,
+				976C54D61CC4C42300CD076A /* icon2.png in Resources */,
 				9773DCA21CC380C700671520 /* depraise.png in Resources */,
 				978BBE9E1CC095AD004607C2 /* Assets.xcassets in Resources */,
 				978BBE9C1CC095AD004607C2 /* Main.storyboard in Resources */,
@@ -643,6 +652,7 @@
 			files = (
 				978BBEF01CC0C746004607C2 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				9773DC681CC3537D00671520 /* ThirdSectionCell.m in Sources */,
+				976C54D41CC4AA7A00CD076A /* FithSectionCell.m in Sources */,
 				978BBE991CC095AD004607C2 /* ViewController.m in Sources */,
 				978BBEEE1CC0C746004607C2 /* MASViewConstraint.m in Sources */,
 				978BBE961CC095AD004607C2 /* AppDelegate.m in Sources */,
