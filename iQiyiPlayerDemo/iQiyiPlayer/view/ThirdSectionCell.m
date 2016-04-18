@@ -29,6 +29,9 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        UIView * selectView = [UIView new];
+        selectView.backgroundColor = RGB(249, 249, 249);
+        self.selectedBackgroundView = selectView;
         [self layoutAllSubviews];
     }
     return self;
@@ -95,7 +98,6 @@
 }
 
 - (void)configureFilmCellWithModel:(PlayerDetailFilmListModel *)model {
-//    self.coverImg.layer.contents = (id)[UIImage imageNamed:model.coverURL].CGImage;
     self.coverImg.image = [UIImage imageNamed:model.coverURL];
     self.titlelabl.text = model.name;
     self.contentlabl.text = model.content;

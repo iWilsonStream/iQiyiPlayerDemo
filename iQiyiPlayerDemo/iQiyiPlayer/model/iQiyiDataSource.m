@@ -70,11 +70,19 @@
         ThirdSectionCell * cell = [tableView dequeueReusableCellWithIdentifier:kPlayerDetailThirdCell];
         if(!cell) {
             cell = [[ThirdSectionCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kPlayerDetailThirdCell];
-            UIView * selectView = [UIView new];
-            selectView.backgroundColor = RGB(249, 249, 249);
-            cell.selectedBackgroundView = selectView;
         }
         
+        PlayerDetailFilmListModel * model = self.items[indexPath.section][indexPath.row];
+        [cell configureFilmCellWithModel:model];
+        
+        return cell;
+    }
+    
+    if(indexPath.section == 3) {
+        ThirdSectionCell * cell = [tableView dequeueReusableCellWithIdentifier:kPlayerDetailThirdCell];
+        if(!cell) {
+            cell = [[ThirdSectionCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kPlayerDetailThirdCell];
+        }
         PlayerDetailFilmListModel * model = self.items[indexPath.section][indexPath.row];
         [cell configureFilmCellWithModel:model];
         

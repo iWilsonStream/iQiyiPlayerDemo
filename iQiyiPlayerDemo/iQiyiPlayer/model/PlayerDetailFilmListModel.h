@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
-@interface PlayerDetailFilmListModel : NSObject
+@interface PlayerDetailFilmListModel : BaseModel
 
 //封面图片路径
 @property (nonatomic, strong) NSString * coverURL;
