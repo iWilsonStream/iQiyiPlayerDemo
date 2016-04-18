@@ -20,6 +20,7 @@
 		976C54DF1CC4CA7100CD076A /* ReplyListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 976C54DE1CC4CA7100CD076A /* ReplyListTableView.m */; };
 		976C54E21CC4CC1200CD076A /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976C54E11CC4CC1200CD076A /* CommentModel.m */; };
 		976C54E51CC4CC2900CD076A /* CommentLayoutObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 976C54E41CC4CC2900CD076A /* CommentLayoutObject.m */; };
+		976C54E91CC4DED200CD076A /* ReplyListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976C54E81CC4DED200CD076A /* ReplyListModel.m */; };
 		9773DC5D1CC3534900671520 /* PlayerDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9773DC561CC3534900671520 /* PlayerDetailController.m */; };
 		9773DC5E1CC3534900671520 /* iQiyiDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9773DC591CC3534900671520 /* iQiyiDataSource.m */; };
 		9773DC5F1CC3534900671520 /* PlayerDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9773DC5C1CC3534900671520 /* PlayerDetailCell.m */; };
@@ -124,6 +125,8 @@
 		976C54E11CC4CC1200CD076A /* CommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
 		976C54E31CC4CC2900CD076A /* CommentLayoutObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentLayoutObject.h; sourceTree = "<group>"; };
 		976C54E41CC4CC2900CD076A /* CommentLayoutObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentLayoutObject.m; sourceTree = "<group>"; };
+		976C54E71CC4DED200CD076A /* ReplyListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyListModel.h; sourceTree = "<group>"; };
+		976C54E81CC4DED200CD076A /* ReplyListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyListModel.m; sourceTree = "<group>"; };
 		9773DC551CC3534900671520 /* PlayerDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerDetailController.h; sourceTree = "<group>"; };
 		9773DC561CC3534900671520 /* PlayerDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerDetailController.m; sourceTree = "<group>"; };
 		9773DC581CC3534900671520 /* iQiyiDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iQiyiDataSource.h; sourceTree = "<group>"; };
@@ -288,6 +291,8 @@
 				976C54E11CC4CC1200CD076A /* CommentModel.m */,
 				976C54E31CC4CC2900CD076A /* CommentLayoutObject.h */,
 				976C54E41CC4CC2900CD076A /* CommentLayoutObject.m */,
+				976C54E71CC4DED200CD076A /* ReplyListModel.h */,
+				976C54E81CC4DED200CD076A /* ReplyListModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -690,6 +695,7 @@
 				978BBEE91CC0C746004607C2 /* MASCompositeConstraint.m in Sources */,
 				9773DC5D1CC3534900671520 /* PlayerDetailController.m in Sources */,
 				978BBEED1CC0C746004607C2 /* MASViewAttribute.m in Sources */,
+				976C54E91CC4DED200CD076A /* ReplyListModel.m in Sources */,
 				976C54DF1CC4CA7100CD076A /* ReplyListTableView.m in Sources */,
 				976C54E21CC4CC1200CD076A /* CommentModel.m in Sources */,
 				978BBEEB1CC0C746004607C2 /* MASConstraintMaker.m in Sources */,

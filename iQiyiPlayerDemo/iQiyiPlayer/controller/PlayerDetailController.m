@@ -8,7 +8,10 @@
 
 #import "PlayerDetailController.h"
 #import "PlayerDetailFilmListModel.h"
+#import "CommentLayoutObject.h"
 #import "iQiyiDataSource.h"
+#import "CommentModel.h"
+#import "ReplyListModel.h"
 
 @interface PlayerDetailController ()<UITableViewDelegate>
 
@@ -90,9 +93,33 @@
     [items addObject:likelistArr];
     [items addObject:@[@"123"]];
     
+    [self parseCommentListData:commentList];
+    
     self.dataSource = [[iQiyiDataSource alloc] initWithItems:items];
     self.tableView.dataSource = self.dataSource;
     [self.tableView reloadData];
+}
+
+- (void)parseCommentListData:(NSArray *)commentList {
+    [commentList enumerateObjectsUsingBlock:^(NSDictionary * obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        /** 解析一条回复数据，然后放倒布局类里面，根据数据来计算出该条数据所需要的所有布局，然后返回布局对象 **/
+        
+        CommentModel * model = [CommentModel new];
+        [model parseDictionary:obj];
+        
+        if([model.replylist isKindOfClass:[NSArray class]]) {
+            NSArray * replys = (NSArray *)[model replylist];
+            NSMutableArray * replysSubArr = [NSMutableArray array];
+            [replys enumerateObjectsUsingBlock:^(NSDictionary * replyDic, NSUInteger idx, BOOL * _Nonnull stop) {
+                ReplyListModel * model = [ReplyListModel new];
+                [model parseDictionary:replyDic];
+                [replysSubArr addObject:model];
+            }];
+            model.replylist = replysSubArr;
+        }
+        
+        
+    }];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

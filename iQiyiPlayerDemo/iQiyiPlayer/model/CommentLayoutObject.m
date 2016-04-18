@@ -10,4 +10,16 @@
 
 @implementation CommentLayoutObject
 
+- (instancetype)initWithObject:(CommentModel *)object {
+    if(!object) return nil;
+    self = [super init];
+    _object = object;
+    [self layout];
+    return self;
+}
+
+- (void) layout {
+
+}
+
 @end

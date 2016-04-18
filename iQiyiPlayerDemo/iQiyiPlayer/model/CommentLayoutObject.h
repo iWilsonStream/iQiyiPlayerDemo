@@ -11,8 +11,10 @@
 
 @interface CommentLayoutObject : NSObject
 
+- (instancetype)initWithObject:(CommentModel *)object;
+
 //一条评论数据(包含了用户头像、用户名、评论内容、回复列表内容等信息)
-@property (nonatomic, strong) CommentModel * commentObject;
+@property (nonatomic, strong) CommentModel * object;
 
 
 
