@@ -16,6 +16,10 @@
 		976C54D11CC48D6F00CD076A /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976C54D01CC48D6F00CD076A /* BaseModel.m */; };
 		976C54D41CC4AA7A00CD076A /* FithSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 976C54D31CC4AA7A00CD076A /* FithSectionCell.m */; };
 		976C54D61CC4C42300CD076A /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 976C54D51CC4C42300CD076A /* icon2.png */; };
+		976C54D91CC4C96D00CD076A /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 976C54D81CC4C96D00CD076A /* CommentCell.m */; };
+		976C54DF1CC4CA7100CD076A /* ReplyListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 976C54DE1CC4CA7100CD076A /* ReplyListTableView.m */; };
+		976C54E21CC4CC1200CD076A /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976C54E11CC4CC1200CD076A /* CommentModel.m */; };
+		976C54E51CC4CC2900CD076A /* CommentLayoutObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 976C54E41CC4CC2900CD076A /* CommentLayoutObject.m */; };
 		9773DC5D1CC3534900671520 /* PlayerDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9773DC561CC3534900671520 /* PlayerDetailController.m */; };
 		9773DC5E1CC3534900671520 /* iQiyiDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9773DC591CC3534900671520 /* iQiyiDataSource.m */; };
 		9773DC5F1CC3534900671520 /* PlayerDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9773DC5C1CC3534900671520 /* PlayerDetailCell.m */; };
@@ -112,6 +116,14 @@
 		976C54D21CC4AA7A00CD076A /* FithSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FithSectionCell.h; sourceTree = "<group>"; };
 		976C54D31CC4AA7A00CD076A /* FithSectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FithSectionCell.m; sourceTree = "<group>"; };
 		976C54D51CC4C42300CD076A /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
+		976C54D71CC4C96D00CD076A /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
+		976C54D81CC4C96D00CD076A /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
+		976C54DD1CC4CA7100CD076A /* ReplyListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyListTableView.h; sourceTree = "<group>"; };
+		976C54DE1CC4CA7100CD076A /* ReplyListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyListTableView.m; sourceTree = "<group>"; };
+		976C54E01CC4CC1200CD076A /* CommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
+		976C54E11CC4CC1200CD076A /* CommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
+		976C54E31CC4CC2900CD076A /* CommentLayoutObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentLayoutObject.h; sourceTree = "<group>"; };
+		976C54E41CC4CC2900CD076A /* CommentLayoutObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentLayoutObject.m; sourceTree = "<group>"; };
 		9773DC551CC3534900671520 /* PlayerDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerDetailController.h; sourceTree = "<group>"; };
 		9773DC561CC3534900671520 /* PlayerDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerDetailController.m; sourceTree = "<group>"; };
 		9773DC581CC3534900671520 /* iQiyiDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iQiyiDataSource.h; sourceTree = "<group>"; };
@@ -247,6 +259,13 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		976C54E61CC4D00300CD076A /* usericon */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = usericon;
+			sourceTree = "<group>";
+		};
 		9773DC541CC3534900671520 /* controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +284,10 @@
 				9773DC591CC3534900671520 /* iQiyiDataSource.m */,
 				9773DCB01CC391E800671520 /* PlayerDetailFilmListModel.h */,
 				9773DCB11CC391E800671520 /* PlayerDetailFilmListModel.m */,
+				976C54E01CC4CC1200CD076A /* CommentModel.h */,
+				976C54E11CC4CC1200CD076A /* CommentModel.m */,
+				976C54E31CC4CC2900CD076A /* CommentLayoutObject.h */,
+				976C54E41CC4CC2900CD076A /* CommentLayoutObject.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -284,6 +307,10 @@
 				9773DC9C1CC37C5B00671520 /* PraiseConsole.m */,
 				976C54D21CC4AA7A00CD076A /* FithSectionCell.h */,
 				976C54D31CC4AA7A00CD076A /* FithSectionCell.m */,
+				976C54D71CC4C96D00CD076A /* CommentCell.h */,
+				976C54D81CC4C96D00CD076A /* CommentCell.m */,
+				976C54DD1CC4CA7100CD076A /* ReplyListTableView.h */,
+				976C54DE1CC4CA7100CD076A /* ReplyListTableView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -420,6 +447,7 @@
 		978BBEF41CC0D9CD004607C2 /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				976C54E61CC4D00300CD076A /* usericon */,
 				976C54D51CC4C42300CD076A /* icon2.png */,
 				976C54C21CC4866C00CD076A /* film_05.png */,
 				976C54C31CC4866C00CD076A /* film_06.png */,
@@ -651,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				978BBEF01CC0C746004607C2 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				976C54D91CC4C96D00CD076A /* CommentCell.m in Sources */,
 				9773DC681CC3537D00671520 /* ThirdSectionCell.m in Sources */,
 				976C54D41CC4AA7A00CD076A /* FithSectionCell.m in Sources */,
 				978BBE991CC095AD004607C2 /* ViewController.m in Sources */,
@@ -661,6 +690,8 @@
 				978BBEE91CC0C746004607C2 /* MASCompositeConstraint.m in Sources */,
 				9773DC5D1CC3534900671520 /* PlayerDetailController.m in Sources */,
 				978BBEED1CC0C746004607C2 /* MASViewAttribute.m in Sources */,
+				976C54DF1CC4CA7100CD076A /* ReplyListTableView.m in Sources */,
+				976C54E21CC4CC1200CD076A /* CommentModel.m in Sources */,
 				978BBEEB1CC0C746004607C2 /* MASConstraintMaker.m in Sources */,
 				978BBEEF1CC0C746004607C2 /* NSArray+MASAdditions.m in Sources */,
 				97BC21D31CC104A800AEB38A /* WilsonConst.m in Sources */,
@@ -673,6 +704,7 @@
 				978BBEEC1CC0C746004607C2 /* MASLayoutConstraint.m in Sources */,
 				978BBECB1CC0B943004607C2 /* iQiyiPlayer.m in Sources */,
 				9773DC621CC3536600671520 /* FirstSectionCell.m in Sources */,
+				976C54E51CC4CC2900CD076A /* CommentLayoutObject.m in Sources */,
 				9773DC651CC3537200671520 /* SecondSectionCell.m in Sources */,
 				9773DC9D1CC37C5B00671520 /* PraiseConsole.m in Sources */,
 			);

@@ -71,6 +71,7 @@
     NSDictionary * dic = [[NSDictionary alloc] initWithContentsOfFile:path];
     NSArray * filmslist = dic[@"filmslist"];
     NSArray * likelist  = dic[@"likelist"];
+    NSArray * commentList = dic[@"commentlist"];
     NSMutableArray * filmslistArr = [NSMutableArray array];
     NSMutableArray * likelistArr  = [NSMutableArray array];
     
