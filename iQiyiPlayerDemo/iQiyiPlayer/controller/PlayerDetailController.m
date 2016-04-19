@@ -18,6 +18,7 @@
 @property (nonatomic, strong) iQiyiPlayer * player;
 @property (nonatomic, strong) iQiyiDataSource * dataSource;
 @property (nonatomic, strong) UITableView * tableView;
+@property (nonatomic, strong) NSMutableArray * items;
 
 @end
 
@@ -52,6 +53,7 @@
 }
 
 - (void) setupTableView {
+    _items = [NSMutableArray array];
     UITableView * tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.delegate = self;
@@ -93,17 +95,18 @@
     [items addObject:likelistArr];
     [items addObject:@[@"123"]];
     
-    [self parseCommentListData:commentList];
-    
+    NSArray * comments = [self parseCommentListData:commentList];
+    [items addObject:comments];
+    _items = items;
     self.dataSource = [[iQiyiDataSource alloc] initWithItems:items];
     self.tableView.dataSource = self.dataSource;
     [self.tableView reloadData];
 }
 
-- (void)parseCommentListData:(NSArray *)commentList {
+- (NSArray *)parseCommentListData:(NSArray *)commentList {
+    NSMutableArray * comments = [NSMutableArray array];
     [commentList enumerateObjectsUsingBlock:^(NSDictionary * obj, NSUInteger idx, BOOL * _Nonnull stop) {
         /** 解析一条回复数据，然后放倒布局类里面，根据数据来计算出该条数据所需要的所有布局，然后返回布局对象 **/
-        
         CommentModel * model = [CommentModel new];
         [model parseDictionary:obj];
         
@@ -117,13 +120,14 @@
             }];
             model.replylist = replysSubArr;
         }
-        
-        
+        CommentLayoutObject * object = [[CommentLayoutObject alloc] initWithObject:model];
+        [comments addObject:object];
     }];
+    return comments;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if(section == 2 || section == 3) return 40;
+    if(section == 2 || section == 3 || section == 4) return 40;
     
     return 0.01f;
 }
@@ -169,8 +173,10 @@
     else if (indexPath.section == 2 || indexPath.section == 3) {
         CGFloat standardImgWidth = kStandardImgWidth;
         return standardImgWidth / 1.5 + 20;
+    } else if (indexPath.section == 4) {
+        CommentLayoutObject * object = _items[indexPath.section][indexPath.row];
+        return object.cellHeight;
     }
-//    else if (indexPath.section == 3) return 120;
     else return 120;
 }
 

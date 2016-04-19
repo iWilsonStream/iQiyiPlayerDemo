@@ -46,6 +46,8 @@
 //standard img widht
 #define kStandardImgWidth iPhone6plus_6Splus ? 165 : ((iPhone6_6S || iPhone6plusZoomMode)? 145 : 120)
 
+//帮助方法宏定义
+#define Help [kHelp shareInstance]
 
 typedef void (^configureCellBlock) (id item, id cell, NSUInteger indexRow);
 //typedef void (^cascadeConfigureCellBlock);

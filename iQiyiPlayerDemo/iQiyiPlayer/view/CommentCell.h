@@ -11,4 +11,8 @@
 
 @interface CommentCell : UITableViewCell
 
+- (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier object:(CommentLayoutObject *)object;
+
+@property (nonatomic, strong) CommentLayoutObject * layoutObject;
+
 @end

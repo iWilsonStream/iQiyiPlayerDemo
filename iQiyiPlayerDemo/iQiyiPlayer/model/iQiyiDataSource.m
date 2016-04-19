@@ -12,6 +12,7 @@
 #import "SecondSectionCell.h"
 #import "ThirdSectionCell.h"
 #import "FithSectionCell.h"
+#import "CommentCell.h"
 
 @interface iQiyiDataSource ()
 
@@ -96,6 +97,17 @@
             cell = [[FithSectionCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kPlayerDetailFivthCell];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
+        return cell;
+    }
+    
+    if(indexPath.section == 5) {
+        CommentCell * cell = [tableView dequeueReusableCellWithIdentifier:kPlayerDetailCommentCell];
+        CommentLayoutObject * object = self.items[indexPath.section][indexPath.row];
+        if(!cell) {
+            cell = [[CommentCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kPlayerDetailCommentCell object:object];
+        }
+        cell.layoutObject = object;
+        
         return cell;
     }
     

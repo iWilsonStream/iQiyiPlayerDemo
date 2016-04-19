@@ -28,18 +28,20 @@
 //评论按钮
 @property (nonatomic, strong) UIButton * commentBtn;
 
-
 @end
 
 @implementation CommentCell
 
-- (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+- (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier object:(CommentLayoutObject *)object {
     if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-    
+        
     }
     return self;
 }
 
+- (void) setLayoutObject:(CommentLayoutObject *)layoutObject {
+    _layoutObject = layoutObject;
+}
 
 
 @end

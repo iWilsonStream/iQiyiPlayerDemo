@@ -11,11 +11,46 @@
 
 @interface CommentLayoutObject : NSObject
 
+
+#define kUserIconSize CGSizeMake(40,40)
+#define kUserNameSize CGSizeMake(150,20)
+#define kContentWidth iPhone6plus_6Splus ? 314 : ((iPhone6_6S || iPhone6plusZoomMode) ? 275 : 220)
+#define kSendDateSize CGSizeMake(150,20)
+#define kCommentBtnSize CGSizeMake(30,30)
+#define kPraiseBtnSize  CGSizeMake(30,30)
+#define kTopPadding 10
+#define kBottomPadding 10
+
+
 - (instancetype)initWithObject:(CommentModel *)object;
 
 //一条评论数据(包含了用户头像、用户名、评论内容、回复列表内容等信息)
 @property (nonatomic, strong) CommentModel * object;
+//用于存放所有cell的布局对象
+@property (nonatomic, strong) NSMutableArray * rects;
+//用于存储本条cell的总高度
+@property (nonatomic, assign) CGFloat cellHeight;
 
+
+//头像rect
+@property (nonatomic, assign) CGRect iconRect;
+//用户名rect
+@property (nonatomic, assign) CGRect userNameRect;
+//内容rect
+@property (nonatomic, assign) CGRect contentRect;
+//发布时间rect
+@property (nonatomic, assign) CGRect sendDateRect;
+//点赞按钮rect
+@property (nonatomic, assign) CGRect praiseBtnRect;
+//点赞label Rect
+@property (nonatomic, assign) CGRect praiseLablRect;
+//评论button rect
+@property (nonatomic, assign) CGRect commentBtnRect;
+//回复列表rect
+@property (nonatomic, assign) CGRect replyListRect;
+
+//计算cell的总高度
+- (void) calculateCellHeight;
 
 
 @end

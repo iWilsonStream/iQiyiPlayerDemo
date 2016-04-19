@@ -14,6 +14,7 @@ NSString * const kPlayerDetailThirdCell  = @"ThirdCell";
 NSString * const kPlayerDetailFourthCell = @"FourthCell";
 NSString * const kPlayerDetailFivthCell   = @"FivthCell";
 NSString * const kPlayerDetailCell = @"PlayerDetailCell";
+NSString * const kPlayerDetailCommentCell = @"PlayerDetailCommentCell";
 NSString * const kPlayerURLXunLongJue      = @"http://demo.zhixueyun.com/static/00/1B/CqJoMVaFMfSEChp9AAAAABEr3BU216.mp4";
 NSString * const kPlayerURLHuoGuoYingXiong = @"http://demo.zhixueyun.com/static/00/28/CqHYwVbiYEqEcb5DAAAAANSGOPQ829.mp4";
 NSString * const kPlayerURLYeWen           = @"http://demo.zhixueyun.com/static/00/19/CqJoMVaFGgeER3dvAAAAAFGXKBg448.mp4";
