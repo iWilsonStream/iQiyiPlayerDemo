@@ -30,7 +30,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         UIView * selectView = [UIView new];
-        selectView.backgroundColor = RGB(249, 249, 249);
+        selectView.backgroundColor = kCellSelectedViewBackgroundColor;
         self.selectedBackgroundView = selectView;
         [self layoutAllSubviews];
     }

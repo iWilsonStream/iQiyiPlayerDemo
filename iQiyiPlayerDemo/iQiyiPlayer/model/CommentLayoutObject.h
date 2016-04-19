@@ -12,9 +12,9 @@
 @interface CommentLayoutObject : NSObject
 
 
-#define kUserIconSize CGSizeMake(40,40)
+#define kUserIconSize CGSizeMake(30,30)
 #define kUserNameSize CGSizeMake(150,20)
-#define kContentWidth iPhone6plus_6Splus ? 314 : ((iPhone6_6S || iPhone6plusZoomMode) ? 275 : 220)
+#define kContentWidth iPhone6plus_6Splus ? 329 : ((iPhone6_6S || iPhone6plusZoomMode) ? 290 : 235)
 #define kSendDateSize CGSizeMake(150,20)
 #define kCommentBtnSize CGSizeMake(30,30)
 #define kPraiseBtnSize  CGSizeMake(30,30)

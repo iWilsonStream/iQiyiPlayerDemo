@@ -127,20 +127,21 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if(section == 2 || section == 3 || section == 4) return 40;
+    if(section == 2 || section == 3 || section == 5) return 40;
     
     return 0.01f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
-    if(section == 2 || section == 3) {
+    if(section == 2 || section == 3 || section == 5) {
         UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
         view.backgroundColor = RGB(255, 255, 255);
         
         NSString * title = nil;
         if(section == 2) title = @"播放列表";
         else if(section == 3) title = @"猜你喜欢";
+        else if (section == 5) title = @"评论";
         
         UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 200, 40)];
         label.text = title;
@@ -149,12 +150,14 @@
         label.font = kTitleFont;
         [view addSubview:label];
         
-        CGRect rect = view.frame;
-        rect.size.height = 1;
-        rect.origin.y = 39;
-        UIView * line = [[UIView alloc] initWithFrame:rect];
-        line.backgroundColor = kLightGrayColor;
-        [view addSubview:line];
+        if(section != 5) {
+            CGRect rect = view.frame;
+            rect.size.height = 1;
+            rect.origin.y = 39;
+            UIView * line = [[UIView alloc] initWithFrame:rect];
+            line.backgroundColor = kLightGrayColor;
+            [view addSubview:line];
+        }
         
         return view;
     }
@@ -174,10 +177,12 @@
         CGFloat standardImgWidth = kStandardImgWidth;
         return standardImgWidth / 1.5 + 20;
     } else if (indexPath.section == 4) {
+        return 120;
+    } else if (indexPath.section == 5) {
         CommentLayoutObject * object = _items[indexPath.section][indexPath.row];
         return object.cellHeight;
     }
-    else return 120;
+    return 120;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {

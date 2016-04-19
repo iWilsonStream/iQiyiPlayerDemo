@@ -43,6 +43,8 @@
 #define kLightGrayColor RGB(235,235,241)
 //green color
 #define kGreenColor RGB(27,181,9)
+//cell selected view background color
+#define kCellSelectedViewBackgroundColor RGB(249, 249, 249)
 //standard img widht
 #define kStandardImgWidth iPhone6plus_6Splus ? 165 : ((iPhone6_6S || iPhone6plusZoomMode)? 145 : 120)
 

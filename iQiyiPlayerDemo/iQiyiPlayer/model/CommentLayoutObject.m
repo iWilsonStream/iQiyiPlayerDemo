@@ -34,26 +34,26 @@
     _iconRect = CGRectMake(10, 10, kUserIconSize.width, kUserIconSize.height);
     
     //2.用户名rect
-    _userNameRect = CGRectMake(CGRectGetMaxX(_iconRect) + 20, CGRectGetMinY(_iconRect), kUserNameSize.width, kUserNameSize.height);
+    _userNameRect = CGRectMake(CGRectGetMaxX(_iconRect) + 20, CGRectGetMinY(_iconRect) - 5, kUserNameSize.width, kUserNameSize.height);
     
     //3.内容rect
     CGRect calculateRect = [Help calculateText:_object.content withConstraintSize:CGSizeMake(kContentWidth, MAXFLOAT) font:kContentFont];
-    _contentRect = CGRectMake(CGRectGetMinX(_userNameRect), CGRectGetMaxY(_userNameRect), kContentWidth, calculateRect.size.height);
+    _contentRect = CGRectMake(CGRectGetMinX(_userNameRect), CGRectGetMaxY(_userNameRect) + 5, kContentWidth, calculateRect.size.height);
     
     //4.发布时间
-    _sendDateRect = CGRectMake(CGRectGetMinX(_userNameRect), CGRectGetMaxY(_contentRect), kSendDateSize.width, kSendDateSize.height);
+    _sendDateRect = CGRectMake(CGRectGetMinX(_userNameRect), CGRectGetMaxY(_contentRect) + 5, kSendDateSize.width, kSendDateSize.height);
     
     //5.评论按钮
     CGFloat commentBtnWidth = kCommentBtnSize.width;
-    _commentBtnRect = CGRectMake(kScreenSize.width - 30 - commentBtnWidth, CGRectGetMinY(_sendDateRect), kCommentBtnSize.width, kCommentBtnSize.height);
+    _commentBtnRect = CGRectMake(kScreenSize.width - 15 - commentBtnWidth, CGRectGetMinY(_sendDateRect) - 5, kCommentBtnSize.width, kCommentBtnSize.height);
     
     //6.点赞按钮Rect
     CGFloat praiseBtnWidth = kPraiseBtnSize.width;
-    _praiseBtnRect = CGRectMake(CGRectGetMinX(_commentBtnRect) - praiseBtnWidth - 30, CGRectGetMinY(_commentBtnRect), kPraiseBtnSize.width, kPraiseBtnSize.height);
+    _praiseBtnRect = CGRectMake(CGRectGetMinX(_commentBtnRect) - praiseBtnWidth - 15, CGRectGetMinY(_commentBtnRect), kPraiseBtnSize.width, kPraiseBtnSize.height);
     
     //7.点赞label rect
     CGRect praiseCountRect = [Help calculateText:_object.praise_count withConstraintSize:CGSizeMake(120, MAXFLOAT) font:kMinFont];
-    _praiseLablRect = CGRectMake(CGRectGetMinX(_praiseBtnRect) - praiseCountRect.size.width - 10, CGRectGetMinY(_praiseBtnRect), praiseCountRect.size.width, praiseCountRect.size.height);
+    _praiseLablRect = CGRectMake(CGRectGetMinX(_praiseBtnRect) - praiseCountRect.size.width - 5, CGRectGetMinY(_praiseBtnRect) + 8, praiseCountRect.size.width, praiseCountRect.size.height);
 }
 
 - (void) layoutReplyConsole {
