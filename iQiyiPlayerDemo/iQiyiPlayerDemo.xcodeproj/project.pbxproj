@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		975675FF1CC7233D0046BFAE /* PlayerSubviewsConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 975675FE1CC7233D0046BFAE /* PlayerSubviewsConsole.m */; };
 		9767C3701CC6301500E79EFF /* kHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9767C36F1CC6301500E79EFF /* kHelp.m */; };
 		9767C3731CC634B900E79EFF /* comment_reply_p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9767C3711CC634B900E79EFF /* comment_reply_p@2x.png */; };
 		9767C3741CC634B900E79EFF /* comment_reply_p@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9767C3721CC634B900E79EFF /* comment_reply_p@3x.png */; };
@@ -163,6 +164,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		975675FD1CC7233D0046BFAE /* PlayerSubviewsConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSubviewsConsole.h; sourceTree = "<group>"; };
+		975675FE1CC7233D0046BFAE /* PlayerSubviewsConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSubviewsConsole.m; sourceTree = "<group>"; };
 		9767C36E1CC6301500E79EFF /* kHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kHelp.h; sourceTree = "<group>"; };
 		9767C36F1CC6301500E79EFF /* kHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kHelp.m; sourceTree = "<group>"; };
 		9767C3711CC634B900E79EFF /* comment_reply_p@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "comment_reply_p@2x.png"; sourceTree = "<group>"; };
@@ -569,6 +572,8 @@
 			children = (
 				978BBEC91CC0B943004607C2 /* iQiyiPlayer.h */,
 				978BBECA1CC0B943004607C2 /* iQiyiPlayer.m */,
+				975675FD1CC7233D0046BFAE /* PlayerSubviewsConsole.h */,
+				975675FE1CC7233D0046BFAE /* PlayerSubviewsConsole.m */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -923,6 +928,7 @@
 				978BBE931CC095AD004607C2 /* main.m in Sources */,
 				978BBEF11CC0C746004607C2 /* View+MASAdditions.m in Sources */,
 				978BBEE91CC0C746004607C2 /* MASCompositeConstraint.m in Sources */,
+				975675FF1CC7233D0046BFAE /* PlayerSubviewsConsole.m in Sources */,
 				9773DC5D1CC3534900671520 /* PlayerDetailController.m in Sources */,
 				978BBEED1CC0C746004607C2 /* MASViewAttribute.m in Sources */,
 				976C54E91CC4DED200CD076A /* ReplyListModel.m in Sources */,

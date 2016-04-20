@@ -94,6 +94,7 @@
     _praiseLabl.textColor = kDefaultColor;
     _praiseLabl.font = kMinFont;
     _praiseLabl.backgroundColor = [UIColor clearColor];
+    _praiseLabl.textAlignment = NSTextAlignmentRight;
     [self.contentView addSubview:_praiseLabl];
     
     //6.点赞按钮

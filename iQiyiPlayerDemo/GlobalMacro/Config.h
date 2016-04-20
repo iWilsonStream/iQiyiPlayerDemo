@@ -27,6 +27,8 @@
 #define iPhone6plusZoomMode (CurrMode? CGSizeEqualToSize(CGSizeMake(1125, 2001),ModelSize):NO)
 //RGB
 #define RGB(r,g,b) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:1]
+//RGB with alpha
+#define RGBWithAlpha(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 //ScreenSize
 #define kScreenSize [UIScreen mainScreen].bounds.size
 //Title grade font
