@@ -52,6 +52,7 @@
 
 //帮助方法宏定义
 #define Help [kHelp shareInstance]
+#define PlayerBrightness [PlayerBrightnessView shareBrightnessView]
 
 typedef void (^configureCellBlock) (id item, id cell, NSUInteger indexRow);
 //typedef void (^cascadeConfigureCellBlock);
